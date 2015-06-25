@@ -269,15 +269,8 @@ class Pootle_PB_Global_Customizer_Styling{
 	}
 
 	public function enqueue() {
-		global $PootlePageFile;
 
-		wp_enqueue_script( 'wp-color-picker' );
-
-		// load in footer, so will appear after WP customize-base.js and customize-controls.js
-		wp_enqueue_script( 'pootlepage-customize-controls', plugin_dir_url( $PootlePageFile ) . 'js/customize-controls.js', array( 'jquery' ), false, true );
-
-		wp_enqueue_style( 'wp-color-picker' );
-		wp_enqueue_style( 'pootlepage-customize-controls', plugin_dir_url( $PootlePageFile ) . 'css/customize-controls.css' );
+		wp_enqueue_style( self::$token . '-customizer', plugin_dir_url( __FILE__ ) . 'assets/customizer-controls.css' );
 
 	}
 

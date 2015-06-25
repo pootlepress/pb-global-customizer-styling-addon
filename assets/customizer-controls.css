@@ -4,3 +4,6 @@
  * @package Pootle_PB_Global_Customizer_Styling
  * @version 0.1.0
  */
+#accordion-section-pootlepage_section .customize-control {
+    margin: 7px 0;
+}
